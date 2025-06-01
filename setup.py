@@ -63,7 +63,9 @@ setuptools.setup(
         'optax @ git+https://github.com/deepmind/optax#egg=optax',
         'orbax-checkpoint >= 0.5',
         'seqio @ git+https://github.com/google/seqio#egg=seqio',
-        'tensorflow-cpu',
+        # Use macOS specific TensorFlow build when running on Darwin.
+        'tensorflow-cpu; platform_system!="Darwin"',
+        'tensorflow-macos; platform_system=="Darwin"',
         'tensorstore >= 0.1.20',
     ],
     extras_require={

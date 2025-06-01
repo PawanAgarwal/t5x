@@ -118,6 +118,9 @@ the TPU VM instance unless otherwise stated.
 
     ```
 
+    The installation automatically uses `tensorflow-macos` on macOS and
+    `tensorflow-cpu` on other platforms.
+
 
 5.  Create Google Cloud Storage (GCS) bucket to store the dataset and model
     checkpoints. To create a GCS bucket, see these
